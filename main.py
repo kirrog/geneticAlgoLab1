@@ -31,10 +31,12 @@ def sort_default(list2sort):
     cnt = [0] * (max_num + 1 - min_num)
     for item in list2sort:
         cnt[item - min_num] += 1
-    result = []
+    result = [0] * len(list2sort)
+    counter = 0
     for num, count in enumerate(cnt):
         for i in range(count):
-            result.append(num + min_num)
+            result[counter] = num + min_num
+            counter += 1
     return result
 
 
@@ -45,10 +47,12 @@ def sort_optimised(list2sort):
     cnt = [0] * (max_num + 1 - min_num)
     for item in list2sort:
         cnt[item - min_num] += 1
-    result = []
+    result = [0] * len(list2sort)
+    counter = 0
     for num, count in enumerate(cnt):
         for i in range(count):
-            result.append(num + min_num)
+            result[counter] = num + min_num
+            counter += 1
     return result
 
 
